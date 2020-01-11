@@ -36,3 +36,31 @@
 * Microsoft
 3. Ask Alexa for hints
  4. Integrate a database to store the data, have Alexa retrieve it from the DB.
+
+
+### Question Mongoose Model
+## Each question is its own javascript object containing many properties.
+ ``` Question = {
+	_Id: Unique mongoose ID,
+	Title: Title of the question = String,
+	Description: The question itself = String,
+	Hints: Hints to help user solve the problem = Array of strings,
+	Solution: Solutions to solve it if any = Array of strings,
+	Tags: Categories in which the question may appear in = Array of strings,
+}
+
+```
+
+Example :
+
+```
+Question = {
+	_ID: 143424,
+	Title: ‘Merge two sorted arrays’,
+	Description: ‘Given two sorted arrays m and n, merge them into one without   creating a new array.’
+	Hints: [ ‘use a for loop’, ‘use quicksort algorithm’ ],
+	Solutions: [ ‘First, loop over the first array, then loop over second array, then append the second array’s values into the first one. ’ ],
+	Tags: [ ‘arrays’, ‘easy’, ‘Amazon’]
+}
+
+```

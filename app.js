@@ -1,29 +1,29 @@
 'use strict';
 
-const express = require ('express');
-const app = express();
-
-const cors = require ('cors');
-const superagent= require ('superagent');
+const express = require('express');
+const cors = require('cors');
 const morgan = require('morgan');
 
-app.use(cors);
-app.use(superagent);
-app.use(morgan('dev'));
+const apiRouter = require('./apiRouter');
 
-//Hanna - this attaches the request to the body
-app.use(express.json());
+const app = express();
+
+
+app.use(express.urlencoded({ extended: true }));
+
+app.use(cors());
+app.use(morgan('dev'));
+app.use(apiRouter);
+
+
 
 module.exports = {
     server: app,
     start: (port) => {
-        const PORT = port || process.env.PORT || 3000;
-        app.listen(PORT, () => {
-            console.log(`HELLO, server is up on ${PORT}`);
-        });
+      const PORT = port || process.env.port || 8080;
+      app.listen(PORT, () => {
+        // eslint-disable-next-line no-console
+        console.log(`HELLO! Server is Up on PORT ${PORT}`);
+      });
     },
-};
-
-
-
-
+  };
