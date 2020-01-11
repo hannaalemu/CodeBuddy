@@ -20,4 +20,4 @@ mongoose.connect(MONGOOSE_URI, {
 
 //Hanna - start server on port
 
-App.start(process.env.PORT || 3000);
+App.start(process.env.PORT || 8080);
