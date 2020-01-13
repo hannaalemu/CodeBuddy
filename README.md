@@ -60,7 +60,7 @@ Question = {
 	Description: ‘Given two sorted arrays m and n, merge them into one without   creating a new array.’
 	Hints: [ ‘use a for loop’, ‘use quicksort algorithm’ ],
 	Solutions: [ ‘First, loop over the first array, then loop over second array, then append the second array’s values into the first one. ’ ],
-	Tags: [ ‘arrays’, ‘easy’, ‘Amazon’]
+	Tag: 'Arrays'
 }
 
 ```
