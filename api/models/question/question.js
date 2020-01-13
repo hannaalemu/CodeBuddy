@@ -9,16 +9,16 @@ const question = mongoose.Schema({
         type: String,
         required: true,
     },
-    hints: {
-        type: Array,
-        required: false,
-    },
     solutions: {
         type: Array,
         required: false,
     },
     tag: {
         type: String,
+        required: false,
+    },
+    hints: {
+        type: Array,
         required: false,
     },
 });
