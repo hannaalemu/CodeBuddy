@@ -23,7 +23,7 @@
     "dotenv": "^8.2.0",
     "eslint": "^6.8.0",
     "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mongodb-memory-server": "^6.2.1",
     "mongoose": "^5.8.7",
     "mongoose-schema-jsonschema": "^1.2.1",
